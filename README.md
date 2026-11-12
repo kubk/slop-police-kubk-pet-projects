@@ -1,6 +1,6 @@
 # slop-police-kubk-pet-projects
 
-Opinionated [slop-police](https://github.com/kubk/slop-police) rules shared across my pet projects, in the spirit of [`@nkzw/oxlint-config`](https://github.com/nkzw-tech/oxlint-config).
+Opinionated [slop-police](https://github.com/kubk/slop-police) rules shared across my pet projects.
 
 ## Principles
 
@@ -42,7 +42,7 @@ const user = <any>response;
 
 ### no-aria-attributes
 
-An `aria-*` attribute in JSX.
+An `aria-*` attribute in JSX. Agents add aria attributes without hearing what they do, and bad aria is worse than none: an `aria-label` replaces the visible text, and `aria-live` interrupts with every update. Native elements already give screen readers what they need. Accessibility needs its own testing session with VoiceOver.
 
 ```tsx
 <button aria-label="Close" onClick={close} />
@@ -66,19 +66,8 @@ A length over 2px in a string or template, a `size` prop or an `svg` `width` or 
 <div style={{ width: 24 }} />
 ```
 
-Made for apps with a text size setting, like Memo Card, so turn it on only there. Option: `onlyIn`, a path prefix relative to `slop-police.json` (default: every file).
+Made for apps with a text size setting, so turn it on only there. Option: `onlyIn`, a path prefix relative to `slop-police.json` (default: every file).
 
 ```json
 "no-px-lengths": ["error", { "onlyIn": "packages/frontend/src/" }]
 ```
-
-To keep a length that must not scale, use slop-police's [ignore comment](https://github.com/kubk/slop-police#ignoring-findings) with the reason:
-
-```tsx
-// slop-police-ignore no-px-lengths -- aligns with Telegram's header, which doesn't scale
-"mt-[10px]",
-```
-
-## Releasing
-
-Run `pnpm run release patch` (or `minor` / `major`). It bumps the version, commits `Release x.y.z`, tags `vx.y.z` and pushes. The tag triggers the release workflow, which runs CI, publishes to npm with provenance through trusted publishing and creates a GitHub release with the commits since the previous tag.
