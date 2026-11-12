@@ -16,11 +16,14 @@ export const e = cn("p-4", x);
 export const f = cn(x);
 export const g = cn();
 export const h = lib.cn("p-4");
+export const i = cn(("p-4"));
+export const j = cn("p-4" as string);
 `;
   expect(lint(noRedundantCn, source)).toEqual([
     { file: "index.ts", line: 4, column: 18, message },
     { file: "index.ts", line: 5, column: 18, message },
     { file: "index.ts", line: 6, column: 18, message },
     { file: "index.ts", line: 7, column: 18, message },
+    { file: "index.ts", line: 12, column: 18, message },
   ]);
 });

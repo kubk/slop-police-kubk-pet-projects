@@ -12,10 +12,12 @@ export const b = <any>x;
 export const c = (x as any).foo;
 export const d = x as any[];
 export const e = x as unknown as string;
+export const f = x as (any);
 `;
   expect(lint(noAnyAssertion, source)).toEqual([
     { file: "index.ts", line: 2, column: 18, message },
     { file: "index.ts", line: 3, column: 18, message },
     { file: "index.ts", line: 4, column: 19, message },
+    { file: "index.ts", line: 7, column: 18, message },
   ]);
 });
