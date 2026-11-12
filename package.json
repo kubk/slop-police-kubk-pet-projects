@@ -1,0 +1,49 @@
+{
+  "name": "slop-police-kubk-pet-projects",
+  "version": "0.0.0",
+  "description": "Opinionated slop-police rules shared across kubk's pet projects",
+  "keywords": [
+    "slop-police",
+    "lint",
+    "linter",
+    "typescript",
+    "react",
+    "ai"
+  ],
+  "license": "MIT",
+  "author": "https://github.com/kubk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kubk/slop-police-kubk-pet-projects.git"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "prepublishOnly": "pnpm run build",
+    "release": "sh -c 'npm version --message \"Release %s\" \"$0\" && git push --follow-tags'"
+  },
+  "peerDependencies": {
+    "slop-police": ">=0.3.19"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.55.0",
+    "slop-police": "^0.3.22",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  },
+  "packageManager": "pnpm@9.15.0"
+}
