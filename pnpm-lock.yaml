@@ -12,8 +12,8 @@ importers:
         specifier: ^0.55.0
         version: 0.55.0
       slop-police:
-        specifier: ^0.3.22
-        version: 0.3.22
+        specifier: ^0.3.25
+        version: 0.3.25
       typescript:
         specifier: ^7.0.2
         version: 7.0.2
@@ -557,28 +557,28 @@ packages:
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
 
-  slop-police-darwin-arm64@0.3.22:
-    resolution: {integrity: sha512-Yl8BXLbTejDHdGGU4/yiHnxjVPS18/msXrGMwm7ac5iOkbBtgeU6e0eyzBk038qbKg4kqGjLMPcnn4I1JiBV0w==}
+  slop-police-darwin-arm64@0.3.25:
+    resolution: {integrity: sha512-N20Ony9vPE9c8xfcLcYy0z0SMl6CQzAs93eVXw2GEC9JHhRhS6JNBZ7CTA/3I8RdgyDd3INFh1761T8jfGksPg==}
     cpu: [arm64]
     os: [darwin]
 
-  slop-police-darwin-x64@0.3.22:
-    resolution: {integrity: sha512-mm5q28nY6hviEsYCDx4kWYK181QVLFXpiEm6Grqf7OhXR9wi3Mki69FhOOY8ZwF9YbpUwLC0XbLSlDDyQeE4Og==}
+  slop-police-darwin-x64@0.3.25:
+    resolution: {integrity: sha512-6tkzMnv1FNvlX8GQA5hrrXPMhAucgjjSjM8ImnVGJVfSGVPoW3uWMxa1X4d76mcpAwnFA8gKkfjv/IC745BzeA==}
     cpu: [x64]
     os: [darwin]
 
-  slop-police-linux-arm64@0.3.22:
-    resolution: {integrity: sha512-iorq7ebjEqYNIdELqtSlRHpmUfT+v0JZsSiGp91PQduxIi1/bX/9BRUscAwNGt6Q3XSVG0ApyxnfM/V1wxt3pQ==}
+  slop-police-linux-arm64@0.3.25:
+    resolution: {integrity: sha512-28U7nzD0lorLfsyH+D6jv4HUxKBgTOimiNB+gnmRrmmGhLFWi8wUzcvpmRuWOvMDxU1mNEeab+HYvIbOtzcqeg==}
     cpu: [arm64]
     os: [linux]
 
-  slop-police-linux-x64@0.3.22:
-    resolution: {integrity: sha512-jYRYvFYVbgU+2KxnfoYMUfH4kIG7w936MjNljHHtDvBHnP+xKBHgHPZUnSmEaHCrdJTdCH0iBEs6VZorKWJ1QQ==}
+  slop-police-linux-x64@0.3.25:
+    resolution: {integrity: sha512-pc7TtAGMn9VsjxCz/M0MTh6pGDmBGd71uXHXNAYJ/SrLTxdcnJQxJCB7NZAMhjXV2jYKNvgBSWYnU+ebzB7vBw==}
     cpu: [x64]
     os: [linux]
 
-  slop-police@0.3.22:
-    resolution: {integrity: sha512-4vBjKCJjBxmRnjEyuz8up449BeL4mem//WExCRmrWpWVtjGzfQeLvFvrXYe7nnFkz/35VeNpSmmhr0qtguaQ9w==}
+  slop-police@0.3.25:
+    resolution: {integrity: sha512-2vDuXI1GHVrXgda0VHwP51HPHGpdj6jrDTsC2ntrr92Gv3JhX2mlyoWJiDmoCqrFxqHSwQVRTdJQIjqS8xnwSw==}
     engines: {node: '>=22.18'}
     hasBin: true
 
@@ -1068,24 +1068,24 @@ snapshots:
       '@rolldown/binding-win32-arm64-msvc': 1.2.19
       '@rolldown/binding-win32-x64-msvc': 1.2.19
 
-  slop-police-darwin-arm64@0.3.22:
+  slop-police-darwin-arm64@0.3.25:
     optional: true
 
-  slop-police-darwin-x64@0.3.22:
+  slop-police-darwin-x64@0.3.25:
     optional: true
 
-  slop-police-linux-arm64@0.3.22:
+  slop-police-linux-arm64@0.3.25:
     optional: true
 
-  slop-police-linux-x64@0.3.22:
+  slop-police-linux-x64@0.3.25:
     optional: true
 
-  slop-police@0.3.22:
+  slop-police@0.3.25:
     optionalDependencies:
-      slop-police-darwin-arm64: 0.3.22
-      slop-police-darwin-x64: 0.3.22
-      slop-police-linux-arm64: 0.3.22
-      slop-police-linux-x64: 0.3.22
+      slop-police-darwin-arm64: 0.3.25
+      slop-police-darwin-x64: 0.3.25
+      slop-police-linux-arm64: 0.3.25
+      slop-police-linux-x64: 0.3.25
 
   source-map-js@1.2.2: {}
 
